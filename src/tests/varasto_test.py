@@ -74,3 +74,6 @@ class TestVarasto(unittest.TestCase):
     def test_toString(self):
         self.varasto.lisaa_varastoon(5)
         self.assertEqual(str(self.varasto), "saldo = 5, vielä tilaa 5")
+
+    def test_goes_brr(self):
+        self.assertEqual(self.varasto.__str__(), "oh no")
